@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Portfolio Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2ca980d5f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Music-player font -->
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <!-- League Spartan -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Poppin -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Menu Overlay -->
+    <div class="overlay overlay-slide-left" id="overlay">
+        <!-- Menu Items  -->
+        <nav>
+            <ul>
+                <li id="nav-1" class="slide-out-1">
+                    <a href="#home">Home</a>
+                </li>
+                <li id="nav-2" class="slide-out-2">
+                    <a href="#video-player">Video-Player</a>
+                </li>
+                <li id="nav-3" class="slide-out-3">
+                    <a href="#music-player">Music-Player</a>
+                </li>
+                <li id="nav-4" class="slide-out-4">
+                    <a href="#joke-teller">Joke-teller</a>
+                </li>
+                <li id="nav-5" class="slide-out-5">
+                    <a href="#calculator">Calculator</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Menu Bars -->
+    <div class="menu-bars" id="menu-bars">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <!-- Sections -->
+    <section id="home">
+        <!-- <a id="homepage-icon" href="" target="_blank"><i class="fa-solid fa-house"></i></a> -->
+        <div class="homepage-container">
+            <div class="img-container">
+                <img src="/img/roomcats.jpeg" alt="">
+                <div class="homepage-title-box">
+                    <h1 class="homepage-titleA">JAVASCRIPT</h1>
+                    <div class="port-java-box">
+                        <h1 class="homepage-titleB">PORTFOLIO</h1>
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage-text-block">
+                <h2 class="homepage-subtitle" data-aos="fade-up" data-aos-delay="400">Welcome to my Portfolio!</h2>
+                <p class="homepage-parag" data-aos="fade-left" data-aos-delay="400">Below you will find some of the JS
+                    Projects I worked on so far to improve my
+                    Coding Skills.</p>
+
+                <p class="homepage-parag" data-aos="fade-left" data-aos-delay="400">Use the <b>Navigation</b> on the
+                    <b>top-right</b> or <b>just scroll</b> your
+                    way through the
+                    different sections.
+                </p>
+
+                <div class="upcoming-projects">
+                    <h2 class="upcoming-subtitle">Upcoming Projects</h2>
+                    <div class="upcoming-items">
+                        <h4 class="upcoming-item" data-aos="flip-up" data-aos-delay="200">Pokedex</h4>
+                        <h4 class="upcoming-item" data-aos="flip-up" data-aos-delay="400">Calendar/Planner</h4>
+                        <h4 class="upcoming-item" data-aos="flip-up" data-aos-delay="600">Weather Forecast</h4>
+                    </div>
+                </div>
+
+                <div class="contacts">
+                    <a data-aos="flip-down" data-aos-delay="600" href="https://twitter.com/FalcoTheKid" target="_blank">
+                        <i class="fa-brands fa-square-twitter"></i>
+                    </a>
+
+                    <a data-aos="flip-down" data-aos-delay="400" href="https://github.com/debaptistisfelix"
+                        target="_blank"><i class="fa-brands fa-square-github">
+                        </i></a>
+
+                    <a data-aos="flip-down" data-aos-delay="200"
+                        href="https://it.linkedin.com/in/felix-de-baptistis-391441144" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Video Player -->
+    <section id="video-player">
+        <div class="cinema-curtain"></div>
+        <div class="video-player-and-text-container">
+
+            <div class="video-player-container">
+                <div class="video-player" data-aos="flip-down" data-aos-delay="600">
+                    <video src="/video/trailer2(whiskers).mp4" class="video" playsinline></video>
+
+                    <!-- Show controls -->
+                    <div class="video-show-controls">
+                        <!-- Controls container -->
+                        <div class="video-controls-container">
+                            <!-- Progress bar -->
+                            <div class="video-progress-range" title="Seek">
+                                <div class="video-progress-bar"></div>
+                            </div>
+                            <div class="video-control-group">
+                                <!-- Left controls -->
+                                <div class="video-controls-left">
+                                    <!-- play / pause -->
+                                    <div class="video-play-controls">
+                                        <i class="fas fa-play" title="play" id="video-play-btn"></i>
+                                    </div>
+                                    <!-- Next button -->
+                                    <div class="video-next-controls">
+                                        <i class="fa-solid fa-forward-step" id="video-next-btn" title="Next"></i>
+                                    </div>
+                                    <!-- Volume controls -->
+                                    <div class="video-volume">
+                                        <div class="video-volume-icon">
+                                            <i class="fas fa-volume-up" title="mute" id="volume-icon"></i>
+                                        </div>
+                                        <div class="video-volume-range" title="Change Volume">
+                                            <div class="video-volume-bar"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Time -->
+                                    <div class="video-time">
+                                        <span class="video-time-elaps">00:00 / </span>
+                                        <span class="video-time-duration">02:38</span>
+                                    </div>
+                                </div>
+                                <!-- Right controls -->
+
+                                <div class="video-controls-right">
+                                    <div class="video-gear-box">
+                                        <i class="fa-solid fa-gear" id="video-gear" title="options"></i>
+                                    </div>
+                                    <!-- Option div outside the video controllers -->
+                                    <div class="video-options no-options">
+                                        <!-- Cinema Mode -->
+                                        <div class="video-cinema-mode">
+                                            <label for="cinemaMode">Cinema Mode</label>
+                                            <label class="theme-switch">
+                                                <input type="checkbox">
+                                                <div class="slider round"></div>
+                                            </label>
+                                        </div>
+                                        <!-- Speed -->
+                                        <div class="video-speed" title="playback rate">
+                                            <label class="video-player-speed-label" for="playbackRate">Video Speed
+                                                Rate</label>
+                                            <select name="playbackRate" class="video-player-speed">
+                                                <option class="speed-option" value="0.5">0.5 x</option>
+                                                <option class="speed-option" value="0.75">0.75 x</option>
+                                                <option class="speed-option" value="1" selected>1 x</option>
+                                                <option class="speed-option" value="1.5">1.5 x</option>
+                                                <option class="speed-option" value="2">2 x</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="video-speed" title="playback rate">
+                                        <select name="playbackRate" class="video-player-speed">
+                                            <option value="0.5">0.5 x</option>
+                                            <option value="0.75">0.75 x</option>
+                                            <option value="1" selected>1 x</option>
+                                            <option value="1.5">1.5 x</option>
+                                            <option value="2">2 x</option>
+                                        </select>
+                                    </div> -->
+
+                                    <!-- Fullscreen -->
+                                    <div class="video-fullscreen">
+                                        <i class="fas fa-expand"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="playlist-container" data-aos="flip-down" data-aos-delay=800>
+                    <div class="trailer trailer-block" id="trailer1" data-video-src="">
+                        <div class="poster-container trailer-img-cont">
+                            <img class="poster trailer-img" id="poster1" src="/img/trailer1Img.jpeg"
+                                alt="Flavors of Youth">
+                            <div class="off-trailer">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </div>
+                        </div>
+                        <div class="trailer-text-block ttb" id="trailer1-text-block">
+                            <span class="now-playing-span"><i class="fa-regular fa-circle-play"></i> NOW PLAYING</span>
+                            <div class="trailer-info-container">
+                                <span><b>duration:</b> 75MIN</span>
+                                <span><b>genre:</b> ROMANCE, SLICE OF LIFE</span>
+                                <span><b>produced by:</b> BILIBILI, HAOLINERS ANIMATION</span>
+                                <span><b>studio:</b> COMIX WAVE FILMS</span>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="trailer trailer-block" id="trailer2">
+                        <div class="poster-container trailer-img-cont">
+                            <img class="poster trailer-img" id="poster2" src="/img/trailer2Img.jpeg"
+                                alt="Flavors of Youth">
+                            <div class="off-trailer">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </div>
+                        </div>
+                        <div class="trailer-text-block ttb" id="trailer1-text-block">
+                            <span class="now-playing-span"><i class="fa-regular fa-circle-play"></i> NOW PLAYING</span>
+                            <div class="trailer-info-container">
+                                <span><b>duration:</b> 75MIN</span>
+                                <span><b>genre:</b> ROMANCE, SLICE OF LIFE</span>
+                                <span><b>produced by:</b> BILIBILI, HAOLINERS ANIMATION</span>
+                                <span><b>studio:</b> COMIX WAVE FILMS</span>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="trailer trailer-block" id="trailer3">
+                        <div class="poster-container trailer-img-cont">
+                            <img class="poster trailer-img" id="poster3" src="/img/trailer3Img.jpeg"
+                                alt="Flavors of Youth">
+                            <div class="off-trailer"><i class="fa-regular fa-circle-play"></i></div>
+                        </div>
+                        <div class="trailer-text-block ttb" id="trailer1-text-block">
+                            <span class="now-playing-span"><i class="fa-regular fa-circle-play"></i> NOW PLAYING</span>
+                            <div class="trailer-info-container">
+                                <span><b>duration:</b> 75MIN</span>
+                                <span><b>genre:</b> ROMANCE, SLICE OF LIFE</span>
+                                <span><b>produced by:</b> BILIBILI, HAOLINERS ANIMATION</span>
+                                <span><b>studio:</b> COMIX WAVE FILMS</span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="video-player-text-block">
+                <div class="video-titles-box" data-aos="fade-up" data-aos-delay=400>
+                    <div class="video-hero-pattern"></div>
+                    <h1 class="video-player-title">CUSTOM VIDEO PLAYER</h1>
+                    <h3 class="video-player-subtitle">Anime Trailers from Netflix. <i class="fa-solid fa-film"></i></h3>
+                </div>
+                <div class="video-parags-box" data-aos="fade-left" data-aos-delay="400">
+                    <p class="video-parags">The Video Player is coded <b>from scratch</b>. It's possible to change the
+                        <b>Speed
+                            Rate</b> of the video and to turn on the <b>Cinema Mode</b> by toggling the input in the
+                        <b>options</b>.
+                    </p>
+
+                    <p class="video-parags">Below there's a small <b>Playlist of 3 Anime Trailers</b> from
+                        <b>Netflix</b> with
+                        some
+                        quick infos about them. The <b>User</b> can browse between the videos of the playlist and choose
+                        which
+                        one to see just by clicking on the choosen trailer or by clicking the <b>Next Button</b> in the
+                        Video-Player controllers.
+                    </p>
+                    <p class="video-parags"></p>
+                </div>
+
+                <div class="video-skills" data-aos="flip-down" data-aos-delay=400>
+                    <div class="video-skills-title">Acquired Skills</div>
+                    <div class="video-skills-container">
+                        <p class="video-skill">- Coding Video-Player from scratch</p>
+                        <p class="video-skill">- Video-player features (Cinema Mode, Speed-rate)</p>
+                        <p class="video-skill">- Basic Video Playlist functionality</p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Music Player Section -->
+    <section id="music-player">
+        <div class="ninety-div music-ninety-div">
+            <div class="music-player-text-block">
+                <div data-aos="fade-up" data-aos-delay="400" class="music-titles-box">
+                    <div class="music-hero-pattern"></div>
+                    <h1 class="music-player-title">COLOR-CHANGING</h1>
+                    <h1 class="music-player-title1">MUSIC-PLAYER</h1>
+                    <h1 id="tablet-music-title">COLOR-CHANGING MUSIC-PLAYER</h1>
+                    <h3 class="music-player-subtitle">My Top 5 Favourite Songs</h3>
+                    <h6 class="music-subtitle-mini">(At the moment ...)</h6>
+                </div>
+                <div class="music-parags-box" data-aos="fade-right" data-aos-delay="600">
+                    <p class="music-parags">The <b class="music-b">Music-Player</b> creates a canva from the <b
+                            class="music-b">Album Cover</b>
+                        of the Song currently
+                        played and then
+                        looks through its pixels for the <b class="music-b">dominant RGB</b> color and its <b
+                            class="music-b">Shade RGB</b>
+                        Color.</p>
+
+                    <p class="music-parags">Once the Colors are found, the Player's style and <b
+                            class="music-b">color-combo</b> matches the
+                        one from the Album Cover, giving the <b class="music-b">User</b> a more <b
+                            class="music-b">immersive</b> and <b class="music-b">pleasant Music Experience.</b></p>
+                </div>
+                <div class="music-skills" data-aos="flip-down" data-aos-delay=600>
+                    <h3 class="music-skills-title">Acquired Skills</h3>
+                    <div class="music-skills-container">
+                        <p class="music-skill">- Basic
+                            HTML Canvas skills</p>
+                        <p class="music-skill">-
+                            Dominant Color picking
+                            function</p>
+                        <p class="music-skill">- HTML
+                            Audio element's Methods
+                            and Events</p>
+                    </div>
+                </div>
+            </div>
+            <div class="music-player-container" data-aos="flip-right" data-aos-delay="400">
+                <!-- Song  -->
+                <div class="music-img-container">
+                    <img class="music-main-img" src="" alt="Album Art">
+                    <img id="album-cover" src="" alt="">
+                    <canvas class="music-canvas"></canvas>
+                </div>
+                <h2 id="music-title">Parallel Parking</h2>
+                <h3 id="music-artist">Arden Jones</h3>
+                <audio src="music/Song1(ParallelParking).mp3"></audio>
+                <!-- Progress -->
+                <div class="music-progress-container" id="music-progress-container">
+                    <div class="music-progress" id="music-progress"></div>
+                    <div class="music-duration-wrapper">
+                        <span id="music-current-time">0:00</span>
+                        <span id="music-duration">1:58</span>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <div class="music-player-controls">
+                    <i class="fas fa-backward" id="prev" title="Previous"></i>
+                    <i class="fas fa-play main-button" id="play" title="Play"></i>
+                    <i class="fas fa-forward" id="next" title="Next"></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="joke-teller">
+        <div class="ninety-div joke-ninety-div">
+            <div class="joke-container" data-aos="fade-down" data-aos-delay=600>
+                <button id="joke-button">Tell me a Joke</button>
+                <audio id="joke-audio" controls hidden></audio>
+            </div>
+            <div class="joke-player-text-block">
+                <div class="joke-titles-box" data-aos="fade-up" data-aos-delay=600>
+                    <div class="joke-hero-pattern"></div>
+                    <h1 class="joke-player-title">JOKE-TELLER</h1>
+                    <h3 class="joke-player-subtitle"><i class="fa-solid fa-robot"></i> CUTE ROBOT - CRINGE JOKES <i
+                            class="fa-solid fa-face-grimace"></i></h3>
+                </div>
+                <div class="joke-parags-box" data-aos="fade-left" data-aos-delay="600">
+                    <p class="joke-parags">The (terrible) Jokes are Fetched from a Jokes Api in String form and then
+                        passed to a Text-to-Speech API to make it look like the little Robot itself is delivering the
+                        joke</p>
+
+                    <p class="joke-parags"></p>
+                </div>
+                <div class="joke-skills" data-aos="flip-down" data-aos-delay=600>
+                    <h3 class="joke-skills-title">Acquired Skills</h3>
+                    <div class="joke-skills-container">
+                        <p class="joke-skill">- Text-to-Speech API</p>
+                        <p class="joke-skill">-
+                            Fetching from API</p>
+                        <p class="joke-skill">- HTML
+                            Audio element's Methods
+                            and Events</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="calculator" class="light-bg">
+        <div class="ninety-div calc-ninety-div">
+            <div class="calculator-player-text-block">
+                <div class="calculator-titles-box" data-aos="fade-up" data-aos-delay="400">
+                    <div class="calculator-hero-pattern"></div>
+                    <h1 class="calculator-player-title">
+
+                        BASIC MATH CALCULATOR
+
+                    </h1>
+
+                    <h3 class="calculator-player-subtitle">
+                    </h3>
+                </div>
+                <div class="calculator-parags-box" data-aos="fade-right" data-aos-delay="600">
+                    <p class="calculator-parags"><i class="fa-solid fa-calculator"></i> The Calculator executes basic
+                        Math Operation between integers and
+                        decimals.</p>
+
+                    <p class="calculator-parags">
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        It can switch from Dark to Light Mode by toggling the Dark/Light Mode Toggle.
+                    </p>
+                </div>
+                <div class="calculator-skills" data-aos="flip-down" data-aos-delay=600>
+                    <h3 class="calculator-skills-title">Acquired Skills</h3>
+                    <div class="calculator-skills-container">
+                        <p class="calculator-skill">- Basic Math Operations and Logic</p>
+                        <p class="calculator-skill">-
+                            Dark / Light Mode Switch</p>
+                        <!-- <p class="calculator-skill"></p> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Calculator -->
+            <div class="calculator" data-aos="flip-right" data-aos-delay="400">
+                <!-- Display -->
+                <div class="calculator-display">
+                    <div class="dark-light-box">
+                        <div class="light-box">
+                            <i id="light-btn" class="fa-regular fa-sun"></i>
+                        </div>
+                        <div class="dark-box turned-off">
+                            <i id="dark-btn" class="fa-regular fa-moon"></i>
+                        </div>
+                    </div>
+                    <h1 id="calculator-display">0</h1>
+                </div>
+                <!-- Buttons -->
+                <div class="calculator-buttons">
+                    <button class="operator calc-btn" value="+">+</button>
+                    <button class="operator calc-btn" value="-">-</button>
+                    <button class="operator calc-btn" value="*">×</button>
+                    <button class="operator calc-btn" value="/">÷</button>
+
+                    <button value="7">7</button>
+                    <button value="8">8</button>
+                    <button value="9">9</button>
+                    <button value="4">4</button>
+                    <button value="5">5</button>
+                    <button value="6">6</button>
+                    <button value="1">1</button>
+                    <button value="2">2</button>
+                    <button value="3">3</button>
+
+                    <button class="decimal calc-btn" value=".">.</button>
+                    <button class="calc-btn" value="0">0</button>
+                    <button class="clear calc-btn" id="clear-btn">C</button>
+                    <button class="equal-sign operator calc-btn" value="=">=</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Scripts -->
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- VoiceRSS Script -->
+    <script src="voiceRSS.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
