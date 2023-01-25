@@ -2523,8 +2523,26 @@ trailer-block {
         min-height: 160px;
 
         display: flex;
+    }
 
+    .video-controls-left {
 
+        gap: calc(1.1vw + 0.12rem);
+        width: 70%;
+    }
+
+    .video-volume-range {
+        width: 50px;
+    }
+
+    .video-time {
+        font-size: calc(2.86vw + 0.12rem);
+        display: flex;
+    }
+
+    .video-controls-right {
+
+        gap: calc(2.86vw + 0.12rem);
     }
 
     video {
