@@ -556,6 +556,28 @@ const videos = [
 let trailerIndex = 0;
 let trailerBlocksIndex = 0
 
+
+// Play & Pause ----------------------------------- //
+function showPlayIcon() {
+    videoPlayBtn.classList.replace("fa-pause", "fa-play")
+    videoPlayBtn.setAttribute("title", "Play")
+}
+
+function togglePlay() {
+    if (video.paused) {
+        video.play();
+        videoPlayBtn.classList.replace("fa-play", "fa-pause");
+        videoPlayBtn.setAttribute("title", "Pause")
+    } else {
+        video.pause();
+        showPlayIcon();
+    }
+}
+
+
+
+
+
 function loadTrailer(trailer) {
     video.src = `video/${trailer.name}.mp4`
 }
@@ -589,15 +611,18 @@ function closeInfos(trailer) {
 function nextTrailer() {
     trailerIndex++;
     trailerBlocksIndex++;
-    if (trailerIndex > videos.length - 1 && trailerBlocksIndex > trailers.length - 1) {
+    if (trailerIndex > (videos.length - 1) && trailerBlocksIndex > (trailers.length - 1)) {
         trailerIndex = 0;
         trailerBlocksIndex = 0;
+        loadTrailer(videos[trailerIndex])
+        loadInfos(trailers[trailerBlocksIndex])
         closeInfos(trailers[trailerBlocksIndex + 2])
+        showPlayIcon();
     }
     loadTrailer(videos[trailerIndex])
     loadInfos(trailers[trailerBlocksIndex])
     closeInfos(trailers[trailerBlocksIndex - 1])
-
+    showPlayIcon();
 }
 
 
@@ -635,29 +660,10 @@ playlistContainer.addEventListener("click", (e) => {
 
 })
 
-
-
-// Play & Pause ----------------------------------- //
-function showPlayIcon() {
-    videoPlayBtn.classList.replace("fa-pause", "fa-play")
-    videoPlayBtn.setAttribute("title", "Play")
-}
-
-function togglePlay() {
-    if (video.paused) {
-        video.play();
-        videoPlayBtn.classList.replace("fa-play", "fa-pause");
-        videoPlayBtn.setAttribute("title", "Pause")
-    } else {
-        video.pause();
-        showPlayIcon();
-    }
-}
-
 // On video end, show play button icon
 video.addEventListener("ended", () => {
     showPlayIcon();
-    nextTrailer()
+    nextTrailer();
 })
 
 
