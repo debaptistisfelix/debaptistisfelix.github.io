@@ -1,0 +1,107 @@
+.user-success-alert {
+    width: 60%;
+    background-color: rgba(251, 87, 6, 0.9);
+    color: white;
+    padding: calc(1.1vw + 0.12rem);
+    font-size: calc(3.58vw + 0.12rem);
+    font-weight: 100;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: calc(2.86vw + 0.12rem);
+}
+
+.user-success-msg {
+    text-align: center;
+}
+
+.user-success-closing-x {
+    cursor: pointer;
+}
+
+.user-cancel-alert {
+    display: none;
+}
+
+
+
+
+
+.user-error-alert {
+    background-color: rgba(217, 4, 41, 0.9);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: calc(1vw + 0.015rem);
+    font-size: calc(2.86vw + 0.12rem);
+    color: white;
+    width: 100%;
+    gap: calc(2.86vw + 0.12rem);
+}
+
+.user-error-closing-x {
+    cursor: pointer;
+}
+
+.user-error-cancel-alert {
+    display: none;
+}
+
+
+
+@media (min-width:768px) {
+    /*   .success-alert {
+        padding: calc(0.5vw + 0.75rem);
+        font-size: calc(1.31vw + 0.12rem);
+        width: 70%;
+    }
+
+    .error-alert {
+        padding: calc(0.5vw + 0.75rem);
+        font-size: calc(1.31vw + 0.12rem);
+        width: 70%;
+    } */
+
+    .user-success-alert {
+        width: 30%;
+        padding: calc(0.5vw + 0.075rem);
+        font-size: calc(1.31vw + 0.12rem);
+        gap: calc(1.05vw + 0.12rem);
+    }
+
+    .user-success-closing-x {
+        cursor: pointer;
+    }
+
+    .user-error-alert {
+        padding: calc(0.3vw + 0.045rem);
+        font-size: calc(1.05vw + 0.12rem);
+
+    }
+}
+
+@media (min-width:1024px) {
+    /*  .success-alert {
+        padding: calc(0.46vw + 0.02rem);
+        font-size: calc(1vw + 0.113rem);
+    }
+
+    .error-alert {
+        padding: calc(0.46vw + 0.02rem);
+        font-size: calc(1vw + 0.113rem);
+    } */
+
+    .user-success-alert {
+
+        padding: calc(0.46vw + 0.02rem);
+        font-size: calc(1vw + 0.113rem);
+        gap: calc(0.9vw + 0.05rem);
+    }
+
+    .user-error-alert {
+        padding: calc(0.265vw + 0.02rem);
+        font-size: calc(0.9vw + 0.05rem);
+
+    }
+}

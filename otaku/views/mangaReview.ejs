@@ -1,0 +1,435 @@
+<% layout("layouts/boilerplate") %>
+
+    <title>DPRSSD OTAKU. - <%= manga.title %>
+    </title>
+    <link rel="stylesheet" href="/css/ReviewPageResponsive.css">
+    <!-- <link rel="stylesheet" href="<%= manga.css %>"> -->
+
+
+
+
+
+
+
+
+    <!-- ----------------------- REVIEWPAGE ----------------------------- -->
+
+    <section class="review-container">
+        <h1 class="page-title">Toilet-bound Hanako-kun</h1>
+        <!--    --------------- --REVIEW BANNER PART ---------------------------- -->
+        <div class="review-banner">
+            <div class="ninety-div">
+
+                <div class="panel-container">
+                    <!--  <img class="panel-img" src="/Users/lauraiannuzzi/Downloads/1661612606629.jpg" alt=""> -->
+                    <img class="panel-img" src="<%= manga.panels.panelMobile.url%>" alt="">
+                    <img class="long-panel-img" src="<%= manga.panels.panelTablet.url%>" alt="">
+                    <img class="longest-panel-img" src="<%= manga.panels.panelDesktop.url %>" alt="">
+
+
+                </div>
+                <div class="manga-overview">
+
+
+                    <div class="manga-scores">
+                        <h1 class="manga-title">
+                            <%=manga.title%>
+                        </h1>
+                        <div class="review-block">
+                            <div class="review-shine"></div>
+                            <div class="review-volume-div">
+                                <img class="review-manga-cover-img" src="<%= manga.mangaVolumes.smallVol.url %>" alt="">
+                            </div>
+                            <div class="review-text-block">
+                                <div class="review-upper-text">
+                                    <a class="review-manga-title orange-font">SCORE:</a>
+                                    <h3 class="review-score">
+                                        <%= manga.scores.totalScore %><i class="fa-sharp fa-solid fa-star "></i>
+                                    </h3>
+                                </div>
+                                <div class="review-under-text">
+                                    <div class="review-categ-tags orange-bg">
+                                        <div class="categ-div">
+                                            <img src="<%= manga.categoryTags.categTag1 %>" alt="">
+                                            <a href="/categories" class="categ-title">
+                                                <%= manga.category.categ1 %>
+                                            </a>
+                                        </div>
+                                        <div class="categ-div">
+                                            <img src="<%= manga.categoryTags.categTag2 %>" alt="">
+                                            <a href="/categories" class="categ-title">
+                                                <%= manga.category.categ2 %>
+                                            </a>
+                                        </div>
+                                        <div class="categ-div">
+                                            <img src="<%= manga.categoryTags.categTag3 %>" alt="">
+                                            <a href="/categories" class="categ-title">
+                                                <%= manga.category.categ3 %>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stats">
+                            <div class="art-score">
+                                <h5 class="score-field">ART</h5>
+                                <div class="bar-container">
+                                    <div class="art-bar">
+                                        <span class="score-nr">
+                                            <%= manga.scores.artScore %> / 10
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="character-score">
+                                <h5 class="score-field">CHARACTERS</h5>
+                                <div class="bar-container">
+                                    <div class="character-bar">
+                                        <span class="score-nr">
+                                            <%= manga.scores.characterScore %> / 10
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="story-score">
+                                <h5 class="score-field">STORY</h5>
+                                <div class="bar-container">
+                                    <div class="story-bar">
+                                        <span class="score-nr">
+                                            <%= manga.scores.storyScore %> / 10
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="infos-summary-div">
+                        <div class="manga-infos-block short-version">
+                            <h1 class="info-title"><i class="fa-solid fa-circle-question"></i> Info Sheet <i
+                                    class="fa-solid fa-circle-question"></i></h1>
+                            <div class="info-line">
+                                <h3 class="info-field">Author:</h3>
+                                <h3 class="info-piece">
+                                    <%= manga.infos.author %>
+                                </h3>
+                            </div>
+                            <div class="info-line">
+                                <h3 class="info-field">Status:</h3>
+                                <h3 class="info-piece">
+                                    <%= manga.infos.status %>
+                                </h3>
+                            </div>
+                            <div class="info-line">
+                                <h3 class="info-field">Release:</h3>
+                                <h3 class="info-piece">
+                                    <%= manga.infos.release %>
+                                </h3>
+                            </div>
+                            <div class="info-line">
+                                <h3 class="info-field">Manga:</h3>
+                                <h3 class="info-piece">
+                                    <%= manga.infos.mangavols %>
+                                </h3>
+                            </div>
+                            <div class="info-line">
+                                <h3 class="info-field">Anime:</h3>
+                                <h3 class="info-piece">
+                                    <%= manga.infos.animeEps %>
+                                </h3>
+                            </div>
+                            <div class="info-line">
+                                <h3 class="info-field">Duration:</h3>
+                                <h3 class="info-piece">
+                                    <%= manga.infos.epDuration %>
+                                </h3>
+                            </div>
+                            <div class="info-line">
+                                <h3 class="info-field">Studio:</h3>
+                                <h3 class="info-piece">
+                                    <%= manga.infos.animeStudio %>
+                                </h3>
+                            </div>
+                            <!-- <h3 class="manga-infos"><b>Author:</b> AidaIro</h3>
+                            <h3 class="manga-infos"><b>Status:</b> Ongoing</h3>
+                            <h3 class="manga-infos"><b>Release:</b> July 2014</h3>
+                            <h3 class="manga-infos"><b>Manga:</b> 17 Volumes</h3>
+                            <h3 class="manga-infos"><b>Anime:</b> 12 Episodes</h3>
+                            <h3 class="manga-infos"><b>Studio:</b> Lerche</h3>
+                            <h3 class="manga-infos"><b>Duration:</b> 24 min.</h3> -->
+                        </div>
+                        <div class="manga-summary">
+                            <p><b>Plot:</b>
+                                <%= manga.summary %>
+                            </p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="manga-voted-chars">
+                <h3 class="most-voted-title">Most Voted Characters</h3>
+                <div class="char-blocks">
+                    <div class="char-block">
+                        <img class="char-img"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqPjoRJ06jRB2VXAoWKZ5yTwf0Ssc1RjUMwA&usqp=CAU"
+                            alt="">
+                        <div class="char-text-block">
+                            <h4 class="most-voted-rank">1</h4>
+                            <h5>Nene Yashiro</h5>
+                        </div>
+
+                    </div>
+                    <div class="char-block">
+                        <img class="char-img"
+                            src="https://i.pinimg.com/originals/64/db/77/64db7740761c0f67157a3546488211d1.jpg" alt="">
+                        <div class="char-text-block">
+                            <h4 class="most-voted-rank">2</h4>
+                            <h5>Hanako-kun</h5>
+                        </div>
+
+                    </div>
+                    <div class="char-block">
+                        <img class="char-img"
+                            src="https://i.pinimg.com/originals/fe/26/e2/fe26e2afc12ba648237133b6eb7dd289.png" alt="">
+                        <div class="char-text-block">
+                            <h4 class="most-voted-rank">3</h4>
+                            <h5>Minamoto Kou</h5>
+                        </div>
+
+                    </div>
+                </div>
+                <a class="vote-btn" href="#">Vote Characters</a>
+            </div> -->
+
+
+        <!--  --------------------- REVIEW BODY PART --------------------- -->
+
+        <section class="review-sidebar-container">
+            <section class="review-body">
+                <div class="review-text">
+                    <h2>
+                        <%= manga.review.reviewTitle %>
+                    </h2>
+                    <span class="manga-id-span">
+                        <%=manga._id%>
+                    </span>
+                    <h4>
+                        <%= manga.review.reviewSubtitle1%>
+                    </h4>
+                    <p>
+                        <%= manga.review.reviewParag1%>
+                    </p>
+                    <img src="<%= manga.review.reviewImg1.url%>" alt="">
+
+
+                    <h4>
+                        <%= manga.review.reviewSubtitle2%>
+                    </h4>
+                    <p>
+                        <%= manga.review.reviewParag2%>
+                    </p>
+
+                    <img src="<%= manga.review.reviewImg2.url%>" alt="">
+
+
+                    <h4>
+                        <%= manga.review.reviewSubtitle3%>
+                    </h4>
+
+                    <p>
+                        <%= manga.review.reviewParag3%>
+                    </p>
+                    <img src="<%= manga.review.reviewImg3.url%>" alt="">
+
+
+
+
+                    <div class="conclusion">
+                        <h2>Final Thoughts</h2>
+                        <%if(currentUser && currentUser.username===process.env.POWER ){%>
+                            <form method="POST" action="/api/mangas/<%=manga._id%>?_method=DELETE">
+                                <button class="delete-review-btn" type="submit"><i
+                                        class="fa-solid fa-delete-left"></i></button>
+                            </form>
+                            <% }%>
+                                <div class="conclusion-scores">
+                                    <div class="final-score">
+                                        <h6>DPRSSD OTAKU</h6>
+                                        <h3>
+                                            <%= manga.scores.totalScore%>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                        </h3>
+                                    </div>
+
+                                    <span class="final-vs">VS</span>
+
+                                    <div class="final-score">
+                                        <h6>DPRSSD USERS</h6>
+
+                                        <h3 class="users-score">
+
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                        </h3>
+
+                                    </div>
+                                </div>
+                                <p>
+                                    <%= manga.conclusion%>
+                                </p>
+                                <div class="pros-cons">
+                                    <div class="div-thumb">
+                                        <h3>PROS:</h3>
+                                        <i class="fa-solid fa-thumbs-up"></i>
+                                    </div>
+
+                                    <span>- <%= manga.pros.pro1%></span>
+                                    <span>- <%= manga.pros.pro2%></span>
+                                    <span>- <%= manga.pros.pro3%></span>
+                                </div>
+                                <div class="pros-cons">
+                                    <div class="div-thumb">
+                                        <h3>CONS:</h3>
+                                        <i class="fa-solid fa-thumbs-down"></i>
+                                    </div>
+
+                                    <span>- <%= manga.cons.con1%></span>
+                                    <span>- <%= manga.cons.con2%></span>
+                                    <span>- <%= manga.cons.con3%></span>
+                                </div>
+                    </div>
+                </div>
+
+            </section>
+            <section class="sidebar">
+                <div class="manga-infos-block long-info-block">
+                    <h1 class="info-title"><i class="fa-solid fa-circle-question"></i> Info Sheet <i
+                            class="fa-solid fa-circle-question"></i></h1>
+                    <div class="info-line">
+                        <h3 class="info-field">Author:</h3>
+                        <h3 class="info-piece">
+                            <%= manga.infos.author %>
+                        </h3>
+                    </div>
+                    <div class="info-line">
+                        <h3 class="info-field">Status:</h3>
+                        <h3 class="info-piece">
+                            <%= manga.infos.status %>
+                        </h3>
+                    </div>
+                    <div class="info-line">
+                        <h3 class="info-field">Release:</h3>
+                        <h3 class="info-piece">
+                            <%= manga.infos.release %>
+                        </h3>
+                    </div>
+                    <div class="info-line">
+                        <h3 class="info-field">Manga:</h3>
+                        <h3 class="info-piece">
+                            <%= manga.infos.mangavols %>
+                        </h3>
+                    </div>
+                    <div class="info-line">
+                        <h3 class="info-field">Anime:</h3>
+                        <h3 class="info-piece">
+                            <%= manga.infos.animeEps %>
+                        </h3>
+                    </div>
+                    <div class="info-line">
+                        <h3 class="info-field">Duration:</h3>
+                        <h3 class="info-piece">
+                            <%= manga.infos.epDuration %>
+                        </h3>
+                    </div>
+                    <div class="info-line">
+                        <h3 class="info-field">Studio:</h3>
+                        <h3 class="info-piece">
+                            <%= manga.infos.animeStudio %>
+                        </h3>
+                    </div>
+
+
+                    <!--  <h3 class="manga-infos"><b>Author:</b> AidaIro</h3>
+                    <h3 class="manga-infos"><b>Status:</b> Ongoing</h3>
+                    <h3 class="manga-infos"><b>Release:</b> July 2014</h3>
+                    <h3 class="manga-infos"><b>Manga:</b> 17 Volumes</h3>
+                    <h3 class="manga-infos"><b>Anime:</b> 12 Episodes</h3>
+                    <h3 class="manga-infos"><b>Duration:</b> 24 min.</h3>
+                    <h3 class="manga-infos"><b>Studio:</b> Lerche</h3> -->
+                </div>
+                <div class="manga-summary long-summary">
+                    <p><b>Plot:</b> Nene Yashiro, a first-year high-school student at the Kamome Academy summons
+                        the
+                        Seventh and most famous Wonder of the school, "Hanako-san of the Toilet", but Nene
+                        discovers
+                        that "Hanako-san" is nothing like the rumors say; Hanako-san is a boy. With a turn of
+                        events, she is spiritually bound to Hanako and becomes his assistant!</p>
+                    </p>
+                </div>
+            </section>
+
+        </section>
+
+
+
+    </section>
+
+    <section class="comments-section">
+        <div class="ninety-comments-div">
+            <div class="comments-title-div">
+                <h2 class="comments-title">Comments</h2>
+                <h2 class="comments-count">
+
+                </h2>
+
+            </div>
+
+
+
+            <%if(currentUser){%>
+                <div class="user-div">
+                    <%=currentUser%>
+                </div>
+                <div class="user_id-div">
+                    <%=currentUser._id%>
+                </div>
+                <form class="comments-form" action="api/mangas/<%=manga._id%>/comments" method="POST">
+                    <textarea name="body" id="comment-textarea" cols="30" rows="5"
+                        placeholder="Comment and Vote the Manga" required></textarea>
+                    <div class="submit-btn-box">
+                        <div class="range-input-div">
+                            <input name="rating" id="range-input" type="range" min="1.0" max="10.0" value="1"
+                                oninput="rangevalue.value=value">
+                            <div class="output-div">
+                                <output id="rangevalue">1 </output>
+                                <i class="fa-sharp fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <button class="submit-comment-btn" type="submit">Post</button>
+                    </div>
+                </form>
+                <%} else {%>
+                    <h3 class="comment-links">
+                        <a class="comment-link" href="/login">Login</a>
+                        or
+                        <a class="comment-link" href="/register">Sign Up</a>
+                        to leave a Comment.
+                    </h3>
+                    <%}%>
+
+
+
+
+                        <div class="comments-container">
+                        </div>
+
+
+
+
+        </div>
+    </section>
+
+
+    <script src="/js/mangaReview.js"></script>

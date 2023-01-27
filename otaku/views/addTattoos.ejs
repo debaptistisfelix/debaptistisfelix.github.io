@@ -1,0 +1,17 @@
+<% layout("layouts/boilerplate") %>
+
+
+    <link rel="stylesheet" href="/css/newTattoo.css">
+    <title>DPRSSD OTAKU - Create new Tattoo</title>
+
+    <section class="new-tattoo-section">
+        <form class="new-tattoo-form" action="/api/tattooers/<%=tattooer._id%>/tattoos" method="POST"
+            enctype="multipart/form-data">
+            <label for="title">Title</label>
+            <input id="title" type="text" name="tattoo[title]">
+
+            <label for="img">Img Src</label>
+            <input id="img" type="file" name="tattoo[imgSrc]">
+            <button>Create Tattoo</button>
+        </form>
+    </section>

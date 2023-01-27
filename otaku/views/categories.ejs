@@ -1,0 +1,648 @@
+<% layout("layouts/boilerplate") %>
+
+
+    <link rel="stylesheet" href="/css/CategoriesPageResponsive.css">
+    <title>DPRSSD OTAKU - Categories</title>
+
+
+
+
+
+
+
+
+
+    <section class="category-section">
+        <h1 class="categ-page-title">Manga Categories</h1>
+        <div class="ninety-div">
+
+            <div class="design-div">
+                <img class="mobile-categ-img" src="/images/Categories/categdesign(Mobile).png" alt="">
+
+            </div>
+            <div class="img-slider short-hight">
+
+
+                <div class="slide active" id="intro-slide">
+                    <div class="intro-left-texts">
+                        <h3 class="intro-text-short">Use the <b>buttons above</b> to browse through all our Manga
+                            Categories<br>
+                            OR<br> use the <b>Random Button</b> below to get a Random Recommendation! </h3>
+
+                        <h3 class="intro-text-wide">Use the buttons <b>on the left</b> to browse through all our
+                            Manga
+                            Categories<br>
+                            OR<br> use the <b>Random Button</b> below to get a <b>Random Recommendation</b>!
+
+                        </h3>
+                        <button class="random-btn">???</button>
+                    </div>
+
+
+
+                    <div class="lost-zoro-div">
+                        <img class="intro-img" src="/images/Categories/lostzoro (1).jpg" alt="">
+
+                        <%for(let manga of mangas){%>
+                            <div class="random-block">
+                                <div class="random-shine"></div>
+                                <div class="random-volume-div">
+                                    <img class="random-manga-cover-img" src="<%= manga.mangaVolumes.smallVol.url%>"
+                                        alt="">
+                                </div>
+                                <div class="random-text-block">
+                                    <div class="random-upper-text">
+                                        <a href="/index/<%=manga._id%>" class="random-manga-title orange-font">
+                                            <%= manga.title%>
+                                        </a>
+                                        <h3 class="random-score">
+                                            <%= manga.scores.totalScore%>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                        </h3>
+                                    </div>
+                                    <div class="random-under-text">
+                                        <h4 class="random-infos">
+                                            <%= manga.infos.longmangavols%>
+                                        </h4>
+                                        <h4 class="random-infos">
+                                            <%= manga.infos.release%> - <%= manga.infos.status%>
+                                        </h4>
+                                        <div class="random-categ-tags orange-bg">
+                                            <div class="categ-div">
+                                                <img src="<%= manga.categoryTags.categTag1%>" alt="">
+                                            </div>
+                                            <div class="categ-div">
+                                                <img src="<%= manga.categoryTags.categTag2%>" alt="">
+                                            </div>
+                                            <div class="categ-div">
+                                                <img src="<%= manga.categoryTags.categTag3%>" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%}%>
+
+                    </div>
+
+
+
+                </div>
+
+                <!-- -------- ADVENTURE CATEGORY SLIDE --------------- -->
+
+
+                <div class="slide">
+                    <div class="panel-div">
+                        <img class="panel-img" src="/images/Categories/AdventureCategPanel.jpg" alt="">
+                        <h2 class="panel-title orange-tbg adventure-position">Adventure Mangas</h2>
+                    </div>
+                    <div class="blocks-container adventure-list">
+                        <% for(let manga of mangas){ %>
+                            <% if(manga.category.categ1==="Adventure" || manga.category.categ2==="Adventure" ||
+                                manga.category.categ3==="Adventure" ){ %>
+                                <div class="block adventure-block">
+                                    <div class="shine"></div>
+                                    <div class="volume-div">
+                                        <img class="manga-cover-img" src="<%= manga.mangaVolumes.smallVol.url%>" alt="">
+                                    </div>
+                                    <div class="text-block">
+                                        <div class="upper-text">
+
+                                            <a class="mt orange-font manga-title" href="/index/<%=manga._id%>">
+                                                <%=manga.title%>
+                                            </a>
+
+                                            <h3 class="score">
+                                                <%= manga.scores.totalScore%><i class="fa-sharp fa-solid fa-star"></i>
+                                            </h3>
+                                        </div>
+                                        <div class="under-text">
+                                            <h4 class="infos">
+                                                <%= manga.infos.longmangavols %>
+                                            </h4>
+                                            <h4 class="infos">
+                                                <%= manga.infos.release %> - <%= manga.infos.status %>
+                                            </h4>
+                                            <div class="categ-tags orange-bg">
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag1 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag2 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag3 %>" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+                                    <% } %>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <!-- ------------ SPORT CATEGORY SLIDE --------------- -->
+                <div class="slide">
+                    <div class="panel-div">
+                        <img class="panel-img" src="/images/Categories/SportCategPanel.jpeg" alt="">
+                        <h2 class="panel-title blue-tbg sport-position">Sport Mangas</h2>
+                    </div>
+                    <div class="blocks-container sport-list">
+
+                        <% for(let manga of mangas){ %>
+                            <% if(manga.category.categ1==="Sport" || manga.category.categ2==="Sport" ||
+                                manga.category.categ3==="Sport" ){ %>
+                                <div class="block sport-block">
+                                    <div class="shine"></div>
+                                    <div class="volume-div">
+                                        <img class="manga-cover-img" src="<%= manga.mangaVolumes.smallVol.url%>" alt="">
+                                    </div>
+                                    <div class="text-block">
+                                        <div class="upper-text">
+
+                                            <a class="mt blue-font manga-title" href="/index/<%=manga._id%>">
+                                                <%=manga.title%>
+                                            </a>
+
+                                            <h3 class="score">
+                                                <%= manga.scores.totalScore%><i class="fa-sharp fa-solid fa-star"></i>
+                                            </h3>
+                                        </div>
+                                        <div class="under-text">
+                                            <h4 class="infos">
+                                                <%= manga.infos.longmangavols %>
+                                            </h4>
+                                            <h4 class="infos">
+                                                <%= manga.infos.release %> - <%= manga.infos.status %>
+                                            </h4>
+                                            <div class="categ-tags blue-bg">
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag1 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag2 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag3 %>" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+                                    <% } %>
+                    </div>
+                </div>
+
+
+
+                <!--   ------------ ECCHI CATEGORY SLIDE ----------- -->
+
+
+
+                <div class="slide">
+                    <div class="panel-div">
+                        <img class="panel-img" src="/images/Categories/EcchiCategPanel.jpg" alt="">
+                        <h2 class="panel-title pink-tbg ecchi-position">Ecchi Mangas</h2>
+                    </div>
+                    <div class="blocks-container ecchi-list">
+
+                        <% for(let manga of mangas){ %>
+                            <% if(manga.category.categ1==="Ecchi" || manga.category.categ2==="Ecchi" ||
+                                manga.category.categ3==="Ecchi" ){ %>
+                                <div class="block ecchi-block">
+                                    <div class="shine"></div>
+                                    <div class="volume-div">
+                                        <img class="manga-cover-img" src="<%= manga.mangaVolumes.smallVol.url%>" alt="">
+                                    </div>
+                                    <div class="text-block">
+                                        <div class="upper-text">
+
+                                            <a class="mt pink-font manga-title" href="/index/<%=manga._id%>">
+                                                <%=manga.title%>
+                                            </a>
+
+                                            <h3 class="score">
+                                                <%= manga.scores.totalScore%><i class="fa-sharp fa-solid fa-star"></i>
+                                            </h3>
+                                        </div>
+                                        <div class="under-text">
+                                            <h4 class="infos">
+                                                <%= manga.infos.longmangavols %>
+                                            </h4>
+                                            <h4 class="infos">
+                                                <%= manga.infos.release %> - <%= manga.infos.status %>
+                                            </h4>
+                                            <div class="categ-tags pink-bg">
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag1 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag2 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag3 %>" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+                                    <% } %>
+                    </div>
+                </div>
+
+
+                <!--   ------------ ROMANTIC CATEGORY SLIDE ----------- -->
+
+
+
+                <div class="slide">
+                    <div class="panel-div">
+                        <img class="panel-img" src="/images/Categories/RomanticCategPanel.jpg" alt="">
+                        <h2 class="panel-title red-tbg romantic-position">Romantic Mangas</h2>
+                    </div>
+                    <div class="blocks-container romantic-list">
+                        <% for(let manga of mangas){ %>
+                            <% if(manga.category.categ1==="Romantic" || manga.category.categ2==="Romantic" ||
+                                manga.category.categ3==="Romantic" ){ %>
+                                <div class="block romantic-block">
+                                    <div class="shine"></div>
+                                    <div class="volume-div">
+                                        <img class="manga-cover-img" src="<%= manga.mangaVolumes.smallVol.url%>" alt="">
+                                    </div>
+                                    <div class="text-block">
+                                        <div class="upper-text">
+
+                                            <a class="mt red-font manga-title" href="/index/<%=manga._id%>">
+                                                <%=manga.title%>
+                                            </a>
+
+                                            <h3 class="score">
+                                                <%= manga.scores.totalScore%><i class="fa-sharp fa-solid fa-star"></i>
+                                            </h3>
+                                        </div>
+                                        <div class="under-text">
+                                            <h4 class="infos">
+                                                <%= manga.infos.longmangavols %>
+                                            </h4>
+                                            <h4 class="infos">
+                                                <%= manga.infos.release %> - <%= manga.infos.status %>
+                                            </h4>
+                                            <div class="categ-tags red-bg">
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag1 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag2 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag3 %>" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+                                    <% } %>
+                    </div>
+                </div>
+
+
+                <!-- ------- HORROR CATEGORY SLIDE ------------ -->
+
+                <div class="slide">
+                    <div class="panel-div">
+                        <img class="panel-img" src="/images/Categories/HorrorCategPanel.jpg" alt="">
+                        <h2 class="panel-title purple-tbg horror-position">Horror Mangas</h2>
+                    </div>
+                    <div class="blocks-container horror-list">
+                        <% for(let manga of mangas){ %>
+                            <% if(manga.category.categ1==="Horror" || manga.category.categ2==="Horror" ||
+                                manga.category.categ3==="Horror" ){ %>
+                                <div class="block horror-block">
+                                    <div class="shine"></div>
+                                    <div class="volume-div">
+                                        <img class="manga-cover-img" src="<%= manga.mangaVolumes.smallVol.url%>" alt="">
+                                    </div>
+                                    <div class="text-block">
+                                        <div class="upper-text">
+
+                                            <a class="mt purple-font manga-title" href="/index/<%=manga._id%>">
+                                                <%=manga.title%>
+                                            </a>
+
+                                            <h3 class="score">
+                                                <%= manga.scores.totalScore%><i class="fa-sharp fa-solid fa-star"></i>
+                                            </h3>
+                                        </div>
+                                        <div class="under-text">
+                                            <h4 class="infos">
+                                                <%= manga.infos.longmangavols %>
+                                            </h4>
+                                            <h4 class="infos">
+                                                <%= manga.infos.release %> - <%= manga.infos.status %>
+                                            </h4>
+                                            <div class="categ-tags purple-bg">
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag1 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag2 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag3 %>" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+                                    <% } %>
+                    </div>
+                </div>
+
+
+                <!--  -------- DRAMA CATEGORY SLIDE -------- -->
+
+                <div class="slide">
+                    <div class="panel-div">
+                        <img class="panel-img" src="/images/Categories/DramaCategPanel.jpg" alt="">
+                        <h2 class="panel-title lightb-tbg drama-position">Drama Mangas</h2>
+                    </div>
+                    <div class="blocks-container drama-list">
+                        <% for(let manga of mangas){ %>
+                            <% if(manga.category.categ1==="Drama" || manga.category.categ2==="Drama" ||
+                                manga.category.categ3==="Drama" ){ %>
+                                <div class="block drama-block">
+                                    <div class="shine"></div>
+                                    <div class="volume-div">
+                                        <img class="manga-cover-img" src="<%= manga.mangaVolumes.smallVol.url%>" alt="">
+                                    </div>
+                                    <div class="text-block">
+                                        <div class="upper-text">
+
+                                            <a class="mt lightb-font manga-title" href="/index/<%=manga._id%>">
+                                                <%=manga.title%>
+                                            </a>
+
+                                            <h3 class="score">
+                                                <%= manga.scores.totalScore%><i class="fa-sharp fa-solid fa-star"></i>
+                                            </h3>
+                                        </div>
+                                        <div class="under-text">
+                                            <h4 class="infos">
+                                                <%= manga.infos.longmangavols %>
+                                            </h4>
+                                            <h4 class="infos">
+                                                <%= manga.infos.release %> - <%= manga.infos.status %>
+                                            </h4>
+                                            <div class="categ-tags lightb-bg">
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag1 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag2 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag3 %>" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+                                    <% } %>
+                    </div>
+                </div>
+
+
+
+                <!--  -------- SLICE OF LIFE CATEGORY SLIDE -------- -->
+
+                <div class="slide">
+                    <div class="panel-div">
+                        <img class="panel-img" src="/images/Categories/SliceOfLifeCategPanel.jpg" alt="">
+                        <h2 class="panel-title green-tbg">Slice of Life Mangas</h2>
+                    </div>
+                    <div class="blocks-container slice-of-life-list">
+
+                        <% for(let manga of mangas){ %>
+                            <% if(manga.category.categ1==="Slice of Life" || manga.category.categ2==="Slice of Life" ||
+                                manga.category.categ3==="Slice of Life" ){ %>
+                                <div class="block slice-of-life-block">
+                                    <div class="shine"></div>
+                                    <div class="volume-div">
+                                        <img class="manga-cover-img" src="<%= manga.mangaVolumes.smallVol.url%>" alt="">
+                                    </div>
+                                    <div class="text-block">
+                                        <div class="upper-text">
+
+                                            <a class="mt green-font manga-title" href="/index/<%=manga._id%>">
+                                                <%=manga.title%>
+                                            </a>
+
+                                            <h3 class="score">
+                                                <%= manga.scores.totalScore%><i class="fa-sharp fa-solid fa-star"></i>
+                                            </h3>
+                                        </div>
+                                        <div class="under-text">
+                                            <h4 class="infos">
+                                                <%= manga.infos.longmangavols %>
+                                            </h4>
+                                            <h4 class="infos">
+                                                <%= manga.infos.release %> - <%= manga.infos.status %>
+                                            </h4>
+                                            <div class="categ-tags green-bg">
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag1 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag2 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag3 %>" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+                                    <% } %>
+                    </div>
+                </div>
+
+
+
+                <!--  -------- COMEDY CATEGORY SLIDE -------- -->
+
+                <div class="slide">
+                    <div class="panel-div">
+                        <img class="panel-img" src="/images/Categories/ComedyCategPanel.jpg" alt="">
+                        <h2 class="panel-title yellow-tbg comedy-position">Comedy Mangas</h2>
+                    </div>
+                    <div class="blocks-container comedy-list">
+
+                        <% for(let manga of mangas){ %>
+                            <% if(manga.category.categ1==="Comedy" || manga.category.categ2==="Comedy" ||
+                                manga.category.categ3==="Comedy" ){ %>
+                                <div class="block comedy-block">
+                                    <div class="shine"></div>
+                                    <div class="volume-div">
+                                        <img class="manga-cover-img" src="<%= manga.mangaVolumes.smallVol.url%>" alt="">
+                                    </div>
+                                    <div class="text-block">
+                                        <div class="upper-text">
+
+                                            <a class="mt yellow-font manga-title" href="/index/<%=manga._id%>">
+                                                <%=manga.title%>
+                                            </a>
+
+                                            <h3 class="score">
+                                                <%= manga.scores.totalScore%><i class="fa-sharp fa-solid fa-star"></i>
+                                            </h3>
+                                        </div>
+                                        <div class="under-text">
+                                            <h4 class="infos">
+                                                <%= manga.infos.longmangavols %>
+                                            </h4>
+                                            <h4 class="infos">
+                                                <%= manga.infos.release %> - <%= manga.infos.status %>
+                                            </h4>
+                                            <div class="categ-tags yellow-bg">
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag1 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag2 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag3 %>" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+                                    <% } %>
+
+
+                    </div>
+                </div>
+
+
+                <!--  -------- ACTION CATEGORY SLIDE -------- -->
+
+                <div class="slide">
+                    <div class="panel-div">
+                        <img class="panel-img" src="/images/Categories/ActionCategPanel.jpeg" alt="">
+                        <h2 class="panel-title darkgreen-tbg action-position">Action Mangas</h2>
+                    </div>
+                    <div class="blocks-container action-list">
+                        <% for(let manga of mangas){ %>
+                            <% if(manga.category.categ1==="Action" || manga.category.categ2==="Action" ||
+                                manga.category.categ3==="Action" ){ %>
+                                <div class="block action-block">
+                                    <div class="shine"></div>
+                                    <div class="volume-div">
+                                        <img class="manga-cover-img" src="<%= manga.mangaVolumes.smallVol.url%>" alt="">
+                                    </div>
+                                    <div class="text-block">
+                                        <div class="upper-text">
+
+                                            <a class="mt darkgreen-font manga-title" href="/index/<%=manga._id%>">
+                                                <%=manga.title%>
+                                            </a>
+
+                                            <h3 class="score">
+                                                <%= manga.scores.totalScore%><i class="fa-sharp fa-solid fa-star"></i>
+                                            </h3>
+                                        </div>
+                                        <div class="under-text">
+                                            <h4 class="infos">
+                                                <%= manga.infos.longmangavols %>
+                                            </h4>
+                                            <h4 class="infos">
+                                                <%= manga.infos.release %> - <%= manga.infos.status %>
+                                            </h4>
+                                            <div class="categ-tags darkgreen-bg">
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag1 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag2 %>" alt="">
+                                                </div>
+                                                <div class="categ-div">
+                                                    <img src="<%=manga.categoryTags.categTag3 %>" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% } %>
+                                    <% } %>
+                    </div>
+                </div>
+
+
+
+
+                <div class="navigation">
+                    <div class="gallery-btn active" id="intro-btn">
+                        <img class="categ-icon" src="/images/Categories/info(Mobile).png" alt="">
+
+                    </div>
+
+                    <div class="gallery-btn" id="adventure-btn">
+                        <img class="categ-icon" src="/images/Categories/Adventure(Mobile).png" alt="">
+
+                    </div>
+                    <div class="gallery-btn" id="sport-btn">
+                        <img class="categ-icon" src="/images/Categories/Sport(Mobile).png" alt="">
+
+                    </div>
+                    <div class="gallery-btn" id="ecchi-btn">
+                        <img class="categ-icon" src="/images/Categories/Ecchi(Mobile).png" alt="">
+                    </div>
+                    <div class="gallery-btn" id="romantic-btn">
+                        <img class="categ-icon" src="/images/Categories/Romantic(Mobile).png" alt="">
+                    </div>
+
+                    <div class="gallery-btn" id="horror-btn">
+                        <img class="categ-icon" src="/images/Categories/Horror(Mobile).png" alt="">
+
+                    </div>
+                    <div class="gallery-btn" id="tragedy-btn">
+                        <img class="categ-icon" src="/images/Categories/Drama(Mobile).png" alt="">
+
+                    </div>
+                    <div class="gallery-btn" id="slice-btn">
+                        <img class="categ-icon" src="/images/Categories/SliceOfLife(Mobile).png" alt="">
+                    </div>
+                    <div class="gallery-btn" id="comedy-btn">
+                        <img class="categ-icon" src="/images/Categories/Comedy(Mobile).png" alt="">
+
+                    </div>
+                    <div class="gallery-btn" id="action-btn">
+                        <img class="categ-icon" src="/images/Categories/Action(Mobile).png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="/js/CategoriesPage.js"></script>

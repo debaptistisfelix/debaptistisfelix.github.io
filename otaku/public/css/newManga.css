@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+.new-manga-section {
+    margin-top: calc(15.72vw + 0.12rem);
+    margin-bottom: calc(6.45vw + 0.12rem);
+    ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-manga-form {
+    margin-top: calc(6.45vw + 0.12rem);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(4.65vw + 0.12rem)
+}
+
+.title-div {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1.1vw + 0.12rem)
+}
+
+.scores-block {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1.1vw + 0.12rem)
+}
+
+.number-input {
+    width: 10%;
+    height: calc(4.65vw + 0.12rem);
+}
+
+.categ-div {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1.1vw + 0.12rem)
+}
+
+.infos-div {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1.1vw + 0.12rem)
+}
+
+.summary-div {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1.1vw + 0.12rem)
+}
+
+.mangavols-div {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1.1vw + 0.12rem)
+}
+
+.panels-div {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1.1vw + 0.12rem)
+}
+
+.review-div {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1.1vw + 0.12rem)
+}
+
+.conclusion-div {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1.1vw + 0.12rem)
+}
+
+.pros-div {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1.1vw + 0.12rem)
+}
+
+.cons-div {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1.1vw + 0.12rem)
+}
+
+.css-div {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1.1vw + 0.12rem)
+}
+
+@media (min-width:768px) {
+    .new-manga-section {
+        margin-top: calc(4.95vw + 0.12rem);
+    }
+
+    .new-manga-form {
+        margin-top: calc(1.05vw + 0.12rem);
+    }
+}

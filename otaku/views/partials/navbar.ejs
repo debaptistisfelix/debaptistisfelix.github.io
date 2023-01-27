@@ -1,0 +1,45 @@
+<header class="header">
+    <nav class="navbar">
+
+        <a class="logo" href="/">DPRSSD OTAKU.</a>
+
+
+
+        <ul class="nav-links">
+            <div class="search-div">
+                <span> <i id="search-icon" class="fa-solid fa-magnifying-glass"></i></span>
+                <input id="search-box" type="search" placeholder='Search Mangas'>
+                <div class="search-results"></div>
+            </div>
+            <li>
+                <a class="nav-link" href="/categories">CATEGORIES</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/tattooersList">MANGA TATTOOS</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/">ABOUT US</a>
+            </li>
+
+            <%if(!currentUser){%>
+                <li>
+                    <a class="signin-btn" href="/login">Log in</a>
+                </li>
+                <%} else {%>
+                    <li>
+                        <a class="signin-btn" href="/logout">Log out</a>
+                    </li>
+                    <%}%>
+
+
+        </ul>
+
+
+
+        <div class="icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </nav>
+
+</header>

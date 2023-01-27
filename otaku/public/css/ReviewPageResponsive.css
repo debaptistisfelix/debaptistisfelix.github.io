@@ -1,0 +1,2240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+
+/* ----------- ((( RANGE INPUT STYLING ))) ------------- */
+
+input[type=range] {
+    -webkit-appearance: none;
+
+    width: 100%;
+
+    background: transparent;
+
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+    outline: none;
+    /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+
+
+
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #fb5706;
+    height: calc(6.45vw + 0.12rem);
+    width: calc(6.45vw + 0.12rem);
+    border-radius: 20px;
+    background: #fb5706;
+    background-image: url(/images/Categories/Romantic\(Mobile\).png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    margin-top: calc(-2.15vw - 0.12rem);
+    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #fb5706;
+    height: calc(6.45vw + 0.12rem);
+    width: calc(6.45vw + 0.12rem);
+    border-radius: 20px;
+    background: #fb5706;
+    background-image: url(/images/Categories/Romantic\(Mobile\).png);
+    background-size: cover;
+    background-position: center;
+
+    cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #fb5706;
+    height: calc(6.45vw + 0.12rem);
+    width: calc(6.45vw + 0.12rem);
+    border-radius: 20px;
+    background: #fb5706;
+    background-image: url(/images/Categories/Romantic\(Mobile\).png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: calc(2.15vw + 0.12rem);
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #191919;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #191919;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: calc(2.15vw + 0.12rem);
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #191919;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: calc(2.15vw + 0.12rem);
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #191919;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #191919;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #191919;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #191919;
+}
+
+
+@media (min-width:768px) {
+
+    /* Special styling for WebKit/Blink */
+    input[type=range]::-webkit-slider-thumb {
+        height: calc(2.35vw + 0.12rem);
+        width: calc(2.35vw + 0.12rem);
+        margin-top: calc(-1vw - 0.02rem);
+    }
+
+    /* All the same stuff for Firefox */
+    input[type=range]::-moz-range-thumb {
+        height: calc(2.35vw + 0.12rem);
+        width: calc(2.35vw + 0.12rem);
+    }
+
+    /* All the same stuff for IE */
+    input[type=range]::-ms-thumb {
+        height: calc(2.35vw + 0.12rem);
+        width: calc(2.35vw + 0.12rem);
+    }
+
+
+    input[type=range]::-webkit-slider-runnable-track {
+        height: calc(1vw + 0.02rem);
+    }
+
+    input[type=range]::-moz-range-track {
+        height: calc(1vw + 0.02rem);
+    }
+
+    input[type=range]::-ms-track {
+
+        height: calc(1vw + 0.02rem);
+
+    }
+}
+
+@media (min-width:1024px) {
+
+    /* Special styling for WebKit/Blink */
+    input[type=range]::-webkit-slider-thumb {
+        height: calc(1.76vw + 0.12rem);
+        width: calc(1.76vw + 0.12rem);
+        margin-top: calc(-0.75vw - 0.02rem);
+    }
+
+    /* All the same stuff for Firefox */
+    input[type=range]::-moz-range-thumb {
+        height: calc(1.76vw + 0.12rem);
+        width: calc(1.76vw + 0.12rem);
+    }
+
+    /* All the same stuff for IE */
+    input[type=range]::-ms-thumb {
+        height: calc(1.76vw + 0.12rem);
+        width: calc(1.76vw + 0.12rem);
+    }
+
+
+    input[type=range]::-webkit-slider-runnable-track {
+        height: calc(0.75vw + 0.02rem);
+    }
+
+    input[type=range]::-moz-range-track {
+        height: calc(0.75vw + 0.02rem);
+    }
+
+    input[type=range]::-ms-track {
+
+        height: calc(0.75vw + 0.02rem);
+
+    }
+}
+
+.user-div {
+    display: none;
+}
+
+.user_id-div {
+    display: none;
+}
+
+
+
+/* ----------------- REVIEWPAGE PART --------------- */
+
+
+/* -------------------((((((( REVIEW BANNER PART )))))) ---------------- */
+.review-container {
+    width: 100%;
+    margin-top: calc(15.72vw + 0.12rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.page-title {
+    display: none;
+}
+
+.review-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ninety-div {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ---------- PANEL PART ---------- */
+
+.panel-container {
+    width: 100%;
+}
+
+.panel-img {
+    width: 100%;
+}
+
+.long-panel-img {
+    display: none;
+}
+
+.longest-panel-img {
+    display: none;
+}
+
+
+
+/* ------------- MANGA OVERVIEW ---------------- */
+
+.manga-overview {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(2.86vw + 0.12rem);
+}
+
+
+
+.manga-scores {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(4.65vw + 0.12rem);
+
+}
+
+/* -------------- ((((REVIEW BLOCK)))) ------------------- */
+
+
+.review-block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #191919;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.review-shine {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 100%;
+    width: 10%;
+    transform: skewX(-30deg);
+    left: -50%;
+}
+
+.review-block:hover .review-shine {
+    animation: Slide 0.8s 0s 1;
+}
+
+@keyframes Slide {
+
+    0%,
+    100% {
+        left: -50%;
+    }
+
+    50% {
+        left: 130%
+    }
+}
+
+.review-volume-div {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-manga-cover-img {
+    width: 100%;
+    padding: calc(1.1vw + 0.12rem);
+    border-radius: 10px;
+}
+
+.review-text-block {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: calc(42.15vw + 0.12rem);
+    margin: calc(1.1vw + 0.12rem);
+    margin-right: calc(1.1vw + 0.12rem);
+
+
+}
+
+.review-upper-text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    height: 50%;
+
+
+}
+
+.review-manga-title {
+    color: #fb5706;
+    font-weight: bold;
+    font-size: calc(4.72vw + 0.12rem);
+    font-family: 'Press Start 2P', cursive;
+}
+
+.review-score {
+    color: white;
+    display: flex;
+    font-size: calc(8.22vw + 0.12rem)
+}
+
+.review-score i {
+    color: #ffb600;
+}
+
+
+.review-under-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    height: 75%;
+
+}
+
+.review-categ-tags {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(1vw + 0.015rem);
+}
+
+.categ-div {
+    display: flex;
+    color: white;
+    font-size: calc(4.72vw + 0.12rem);
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    gap: calc(1.1vw + 0.12rem);
+    border: 2px solid #fb5706;
+    border-left: none;
+    box-sizing: border-box;
+    border-radius: 500px;
+    background-color: #fb5706;
+    cursor: pointer;
+
+}
+
+.categ-div:hover {
+    transform: scale(1.05);
+    filter: brightness(80%);
+}
+
+.categ-div a {
+    text-decoration: none;
+    color: white;
+
+}
+
+
+.categ-div img {
+    width: 15%;
+    background-color: #191919;
+
+
+    border-radius: 50%;
+    padding: calc(1vw + 0.015rem);
+}
+
+
+
+
+
+
+
+
+/* ---------- (((((((STATS)))))))----------------- */
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: calc(2.86vw + 0.12rem);
+
+
+}
+
+
+.art-score {
+    width: 100%;
+    height: calc(8.22vw + 0.12rem);
+    display: flex;
+    align-items: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.character-score {
+    width: 100%;
+    height: calc(8.22vw + 0.12rem);
+    display: flex;
+    align-items: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.story-score {
+    width: 100%;
+    height: calc(8.22vw + 0.12rem);
+    display: flex;
+    align-items: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.total-score {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.score-field {
+    color: #fb5706;
+    background-color: #191919;
+    font-size: calc(2.86vw + 0.12rem);
+    width: 40%;
+    height: 100%;
+    padding: calc(1.1vw + 0.12rem);
+    text-align: center;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.bar-container {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #fb5706;
+    box-sizing: border-box;
+    background-color: rgba(251, 87, 6, 0.5);
+    border-radius: 0 5px 5px 0;
+}
+
+
+
+.art-bar {
+    background-color: #fb5706;
+
+    border-radius: 0 5px 5px 0;
+    padding: 4px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    height: 100%;
+    animation: artGrow 1s 1s ease-out 1 forwards;
+}
+
+.character-bar {
+    background-color: #fb5706;
+
+    border-radius: 0 5px 5px 0;
+    padding: 4px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    height: 100%;
+    animation: characterGrow 1s 1s ease-out 1 forwards;
+}
+
+.story-bar {
+    background-color: #fb5706;
+
+    border-radius: 0 5px 5px 0;
+    padding: 4px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    height: 100%;
+    animation: storyGrow 1s 1s ease-out 1 forwards;
+}
+
+
+
+.score-nr {
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    animation: scoreOpacity 0.5s 1s 1 forwards;
+    display: flex;
+    font-size: calc(4.72vw + 0.12rem);
+}
+
+
+
+
+
+/* @keyframes artGrow {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 87%;
+    }
+}
+
+@keyframes characterGrow {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes storyGrow {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 81%;
+    }
+} */
+
+@keyframes scoreOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ---------- MANGA OVERVIEW PART ---------- */
+
+
+
+.infos-summary-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    gap: calc(2.86vw + 0.12rem);
+}
+
+.manga-infos-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.long-info-block {
+    display: none;
+}
+
+.manga-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: calc(13.58vw + 0.12rem);
+    line-height: calc(13.58vw + 0.12rem);
+    border-top: 2px solid black;
+    width: 100%;
+    padding: calc(1.1vw + 0.12rem) 0;
+    text-align: center;
+
+}
+
+.smaller-title {
+    font-size: calc(10vw + 0.12rem);
+    line-height: calc(10vw + 0.12rem);
+}
+
+.info-title {
+    color: #fb5706;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: calc(4.65vw + 0.12rem);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fb5706;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* .info-title i {
+    font-size: 20px;
+} */
+
+
+.info-line {
+    display: flex;
+    margin: calc(1.1vw + 0.12rem) 0;
+    align-items: center;
+}
+
+.info-field {
+    color: #fb5706;
+    font-family: 'Press Start 2P', cursive;
+    font-size: calc(3.58vw + 0.12rem);
+    width: 50%;
+}
+
+.info-piece {
+    font-size: calc(4.65vw + 0.12rem);
+    display: flex;
+    align-items: baseline;
+}
+
+/* .manga-infos {
+    margin: calc(1.1vw + 0.12rem) 0;
+    font-size: calc(4.65vw + 0.12rem);
+    display: flex;
+    align-items: baseline;
+}
+
+.manga-infos b {
+    color: #fb5706;
+    font-family: 'Press Start 2P', cursive;
+    font-size: calc(3.58vw + 0.12rem)
+} */
+
+.manga-summary {
+    color: white;
+    background-color: #191919;
+    padding: calc(2.15vw + 0.12rem);
+    border-radius: 10px;
+    font-size: calc(4.72vw + 0.12rem);
+    line-height: calc(8.22vw + 0.12rem);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.long-summary {
+    display: none;
+}
+
+
+
+/* --------- MOST VOTED CHARS PART ---------- */
+
+/* .manga-voted-chars {
+    width: 25%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.most-voted-title {
+    color: #fb5706;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    padding: 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fb5706;
+    width: 95%;
+}
+
+.char-blocks {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.char-block {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    gap: 5px;
+    border-radius: 10px;
+    padding: 3px;
+    background-color: #191919;
+
+}
+
+.char-block .most-voted-rank {
+    color: white;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #fb5706;
+    padding: 2px 0;
+
+}
+
+.char-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.char-block h5 {
+    color: white;
+    background-color: #191919;
+    font-size: 14px;
+    text-align: center;
+
+
+}
+
+.char-img {
+    width: 100%;
+    min-height: 60px;
+    max-height: 60px;
+    border-radius: 10px;
+}
+
+.vote-btn {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    text-align: center;
+    background-color: #fb5706;
+    padding: 8px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 100%;
+    border-bottom: 5px solid #b13a04;
+    border: 2px solid #b13a04;
+}
+
+ */
+
+
+/* ------------- REVIEW-BODY PART ---------------------------- */
+
+.review-sidebar-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.review-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: calc(6.45vw + 0.12rem) 0;
+}
+
+.review-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.review-text h2 {
+    color: #fb5706;
+    font-size: calc(10vw + 0.12rem);
+    margin: calc(2.86vw + 0.12rem) 0;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.manga-id-span {
+    display: none;
+}
+
+.review-text h4 {
+    color: #191919;
+    margin-bottom: calc(2.86vw + 0.12rem);
+    font-size: calc(6.45vw + 0.12rem);
+    text-align: left;
+}
+
+.review-text p {
+    font-size: calc(4.72vw + 0.12rem)
+}
+
+.review-text img {
+    width: 90%;
+    margin: calc(6.45vw + 0.12rem) 0;
+    align-self: center;
+}
+
+
+/* --------------------- REVIEW CONCLUSION PART -------------------- */
+
+.conclusion {
+    width: 100%;
+    background-color: #191919;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.conclusion h2 {
+    color: white;
+    margin-top: calc(6.45vw + 0.12rem);
+    font-size: calc(8.22vw + 0.12rem);
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    width: 100%;
+}
+
+.delete-review-btn {
+    color: white;
+    background: #fb5706;
+    padding: 5px;
+    border: none;
+    outline: none;
+
+}
+
+.conclusion-scores {
+    display: flex;
+    background-color: #fb5706;
+    width: 100%;
+    padding: calc(1.1vw + 0.12rem);
+    margin: calc(2.86vw + 0.12rem) 0;
+    justify-content: space-evenly
+}
+
+.final-vs {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    font-size: calc(4.72vw + 0.12rem);
+    align-self: center;
+}
+
+.final-score {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: calc(1.1vw + 0.12rem);
+    width: 30%;
+
+}
+
+.final-score i {
+    color: #ffb600;
+    font-size: calc(6.45vw + 0.12rem);
+}
+
+.final-score h6 {
+    font-size: calc(2.86vw + 0.12rem);
+    color: white;
+    padding: calc(0.5vw + 0.075rem) 0;
+    border-radius: 5px;
+    font-family: 'Press Start 2P', cursive;
+    background: #191919;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.final-score h3 {
+    font-size: calc(6.45vw + 0.12rem);
+}
+
+.vote-div {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(1vw + 0.015rem);
+}
+
+.vote-div form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vote-div input {
+    width: 100%;
+}
+
+.vote-div h6 {
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: calc(2.86vw + 0.12rem);
+}
+
+.vote-div output {
+    color: white;
+    font-size: calc(6.45vw + 0.12rem);
+}
+
+.submit-btn {
+    background-color: #fb5706;
+    color: white;
+    padding: calc(1.1vw + 0.12rem) calc(2.86vw + 0.12rem);
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: calc(2.86vw + 0.12rem);
+}
+
+.conclusion p {
+    color: white;
+    text-align: center;
+    padding: calc(2.86vw + 0.12rem);
+}
+
+.pros-cons {
+    background-color: #fb5706;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: calc(1.1vw + 0.12rem);
+    margin-bottom: calc(2.86vw + 0.12rem);
+    border-radius: 10px;
+}
+
+.div-thumb {
+    display: flex;
+    width: 100%;
+
+    justify-content: space-around;
+}
+
+.div-thumb h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: calc(4.65vw + 0.12rem);
+    padding: calc(1.1vw + 0.12rem);
+    width: 85%;
+    margin-bottom: calc(2.15vw + 0.12rem);
+}
+
+.div-thumb i {
+    width: 15%;
+    font-size: calc(6.45vw + 0.12rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pros-cons span {
+    padding-left: calc(2.86vw + 0.12rem);
+    margin-bottom: calc(1.1vw + 0.12rem);
+    font-size: calc(4.65vw + 0.12rem);
+}
+
+/* --------------- (((( COMMENT SECTION )))) ------------------- */
+
+.comments-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: calc(2.86vw + 0.12rem) 0;
+}
+
+.ninety-comments-div {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(2.86vw + 0.12rem);
+}
+
+.comments-title-div {
+    display: flex;
+    width: 100%;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comments-title {
+    font-family: 'Press Start 2P', cursive;
+    color: #fb5706;
+    font-size: calc(6.45vw + 0.12rem);
+}
+
+.comments-count {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    background-color: #fb5706;
+    padding: calc(1.1vw + 0.12rem) calc(2.86vw + 0.12rem);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(2.86vw + 0.12rem);
+}
+
+.comments-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+#comment-textarea {
+    border: 2px solid #fb5706;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    padding: calc(1.1vw + 0.12rem);
+    outline: none;
+    width: 100%;
+    overflow: scroll;
+    font-size: calc(4.72vw + 0.12rem);
+}
+
+
+#comment-textarea:invalid:required {
+    border: 1px solid #fb5706;
+    border-bottom: none;
+}
+
+#comment-textarea:invalid:required~.submit-btn-box {
+    border: 1px solid #fb5706;
+    border-top: none;
+}
+
+
+
+#comment-textarea:valid {
+    border: 1px solid #2b9348;
+    border-bottom: none;
+}
+
+#comment-textarea:valid~.submit-btn-box {
+    border: 1px solid #2b9348;
+    border-top: none;
+}
+
+
+
+
+
+.submit-btn-box {
+    border: 2px solid #fb5706;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: calc(1.1vw + 0.12rem);
+}
+
+.range-input-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+}
+
+#range-input {
+    width: 90%;
+}
+
+.output-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+}
+
+.output-div #rangevalue {
+    font-size: calc(4.72vw + 0.12rem);
+    color: #191919;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.output-div i {
+    color: #ffb600;
+    font-size: calc(4.72vw + 0.12rem);
+}
+
+.submit-comment-btn {
+    background-color: #fb5706;
+    color: white;
+    padding: calc(1.1vw + 0.12rem) calc(2.86vw + 0.12rem);
+    font-weight: bold;
+    font-size: calc(4.72vw + 0.12rem);
+    font-family: 'Roboto Slab', serif;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.comment-links {
+    font-size: calc(4.72vw + 0.12rem);
+}
+
+.comment-link {
+    color: #fb5706;
+    cursor: pointer;
+}
+
+
+
+.comments-container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1.1vw + 0.12rem);
+
+}
+
+.comment-block {
+    display: flex;
+    flex-direction: column;
+    background-color: #191919;
+    padding: calc(2.86vw + 0.12rem);
+    gap: calc(2.86vw + 0.12rem);
+    border-radius: 10px;
+}
+
+.user-time-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.comment-user {
+    color: #fb5706;
+    font-size: calc(4.72vw + 0.12rem);
+}
+
+.time-stamp {
+    color: lightgrey;
+    font-weight: 100;
+    font-size: calc(3.58vw + 0.12rem);
+}
+
+.time-stamp i {
+    color: #ffb600;
+}
+
+.actual-comment {
+    color: lightgrey;
+    font-size: calc(4.72vw + 0.12rem);
+}
+
+.delete-div {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.comment-delete-btn {
+    color: #fb5706;
+    background-color: #191919;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.comment-delete-btn:hover {
+    color: red;
+
+}
+
+
+
+
+/* ---------- ((((((((((MEDIA QUERIES))))))))))------------------- */
+
+
+
+
+@media (min-width:768px) {
+
+    .review-container {
+        margin-top: calc(4.95vw + 0.12rem);
+    }
+
+    .review-banner {
+        flex-direction: row;
+        background-color: #191919;
+        border-bottom: 5px solid #fb5706;
+
+    }
+
+    .ninety-div {
+        flex-direction: row;
+    }
+
+    .page-title {
+        display: block;
+        font-size: 40px;
+        display: none;
+    }
+
+    .manga-title {
+        font-size: calc(4.3vw + 0.12rem);
+        line-height: calc(4.95vw + 0.12rem);
+        margin: 0;
+        padding: 0;
+        color: white;
+        border: none;
+        border-bottom: 1px solid white;
+        width: 100%;
+        padding: 0;
+        padding-bottom: 10px;
+    }
+
+    .smaller-title {
+        font-size: calc(3.65vw + 0.12rem);
+        line-height: calc(3.65vw + 0.12rem);
+    }
+
+    .panel-container {
+        width: 62%;
+        order: 2;
+        background-color: #191919;
+        display: flex;
+        padding: 10px 0;
+    }
+
+    .panel-img {
+        display: none;
+
+    }
+
+    .long-panel-img {
+        display: block;
+        width: 100%;
+    }
+
+
+    .manga-overview {
+        width: 38%;
+        gap: calc(1.05vw + 0.12rem);
+        order: 1;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 10px 0;
+    }
+
+    .manga-scores {
+        width: 90%;
+        gap: calc(2.35vw + 0.12rem);
+    }
+
+    .review-block {
+        background: rgba(1, 1, 1, 0.5);
+
+    }
+
+    .review-volume-div {
+        width: 40%;
+    }
+
+    .review-manga-cover-img {
+        padding: calc(0.5vw + 0.075rem);
+        width: 100%;
+    }
+
+    .review-text-block {
+        height: calc(16.67vw + 0.12rem);
+
+        width: 60%;
+        padding: calc(0.5vw + 0.075rem);
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .review-manga-title {
+        font-size: calc(1.57vw + 0.12rem);
+    }
+
+    .review-score {
+        font-size: calc(2.35vw + 0.12rem);
+        color: white;
+    }
+
+    .categ-div {
+        font-size: calc(1.83vw + 0.12rem);
+    }
+
+    .categ-div img {
+        padding: calc(0.3vw + 0.0045rem);
+    }
+
+    .stats {
+        gap: calc(1.05vw + 0.12rem);
+    }
+
+    .score-field {
+        font-size: calc(1.44vw + 0.12rem);
+        background: rgba(1, 1, 1, 0.5);
+        padding: calc(0.5vw + 0.075rem);
+    }
+
+    .art-score {
+        height: calc(3.65vw + 0.12rem);
+    }
+
+    .character-score {
+        height: calc(3.65vw + 0.12rem);
+    }
+
+    .story-score {
+        height: calc(3.65vw + 0.12rem);
+    }
+
+    .score-nr {
+        font-size: calc(1.83vw + 0.12rem);
+    }
+
+
+
+
+    .infos-summary-div {
+        display: none;
+    }
+
+    .long-info-block {
+        display: flex;
+    }
+
+
+    .long-summary {
+        padding: calc(1vw + 0.02rem);
+    }
+
+
+
+
+
+
+    .review-sidebar-container {
+        display: flex;
+        flex-direction: row;
+        margin-top: calc(3.65vw + 0.12rem);
+    }
+
+    .review-body {
+        width: 70%;
+        margin: 0;
+    }
+
+    .review-text {
+        width: 95%;
+    }
+
+    .review-text h2 {
+        font-size: calc(4.3vw + 0.12rem);
+        padding: 0;
+        margin: 0;
+    }
+
+    .review-text h4 {
+        font-size: calc(3vw + 0.12rem);
+        margin: calc(1.05vw + 0.12rem) 0;
+    }
+
+    .review-text p {
+        font-size: calc(1.83vw + 0.12rem);
+    }
+
+    .review-text img {
+        margin: calc(2.35vw + 0.12rem) 0;
+    }
+
+    /*  .conclusion {
+        width: 80%;
+        align-self: flex-start;
+    } */
+
+    .conclusion h2 {
+        font-size: calc(3vw + 0.12rem);
+        margin: calc(2.35vw + 0.12rem) 0;
+    }
+
+
+    .conclusion-scores {
+
+        padding: calc(0.5vw + 0.075rem);
+        margin: calc(1.05vw + 0.12rem) 0;
+
+    }
+
+    .final-score {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        width: 30%;
+
+    }
+
+    .final-score i {
+        color: #ffb600;
+        font-size: calc(4.3vw + 0.12rem);
+    }
+
+    .final-score h6 {
+        font-size: calc(1.05vw + 0.12rem);
+        padding: calc(1.1vw + 0.12rem) 0;
+        width: 100%;
+
+
+
+    }
+
+    .final-score h3 {
+        font-size: calc(4.3vw + 0.12rem);
+
+    }
+
+    .final-vs {
+
+        font-size: calc(3vw + 0.12rem);
+
+    }
+
+    .vote-div {
+
+        gap: calc(0.3vw + 0.045rem);
+    }
+
+
+
+
+
+    .vote-div h6 {
+
+        font-size: calc(1.05vw + 0.12rem);
+    }
+
+    .vote-div output {
+        font-size: calc(2.35vw + 0.12rem);
+    }
+
+    .submit-btn {
+        padding: calc(0.5vw + 0.12rem) calc(1.05vw + 0.12rem);
+        font-size: calc(1.83vw + 0.12rem);
+    }
+
+    .conclusion p {
+        color: white;
+        text-align: center;
+        padding: calc(1.05vw + 0.12rem);
+    }
+
+    .pros-cons {
+        padding: calc(0.5vw + 0.075rem);
+        margin-bottom: calc(1.05vw + 0.12rem);
+
+    }
+
+
+    .div-thumb h3 {
+
+        font-size: calc(1.83vw + 0.12rem);
+        padding: calc(0.5vw + 0.075rem);
+
+        margin-bottom: calc(1vw + 0.02rem);
+    }
+
+    .div-thumb i {
+
+        font-size: calc(2.35vw + 0.12rem);
+
+    }
+
+    .pros-cons span {
+        padding-left: calc(1.05vw + 0.12rem);
+        margin-bottom: calc(0.5vw + 0.075rem);
+        font-size: calc(1.83vw + 0.12rem);
+    }
+
+
+
+
+
+
+
+    .sidebar {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: calc(3.65vw + 0.12rem);
+    }
+
+    .sidebar long-info-block {
+        display: flex;
+    }
+
+    .sidebar .long-info-block .info-title {
+        font-size: calc(1.7vw + 0.12rem);
+    }
+
+    .sidebar .long-info-block .info-line {
+        margin: calc(0.3vw + 0.045rem) 0;
+    }
+
+    .sidebar .long-info-block .info-field {
+        font-size: calc(1.05vw + 0.12rem);
+
+        width: 50%;
+    }
+
+    .sidebar .long-info-block .info-piece {
+        font-size: calc(1.7vw + 0.12rem);
+    }
+
+    .sidebar .long-summary {
+        display: flex;
+        font-size: calc(1.83vw + 0.12rem);
+        line-height: calc(2.35vw + 0.12rem);
+        padding: calc(1vw + 0.02rem);
+    }
+
+
+
+
+
+    .comments-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: calc(2.35vw + 0.12rem) 0;
+    }
+
+    .ninety-comments-div {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: calc(1.05vw + 0.12rem);
+    }
+
+    .comments-title-div {
+        display: flex;
+        width: 70%;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .comments-title {
+        font-family: 'Press Start 2P', cursive;
+        color: #fb5706;
+        font-size: calc(2.35vw + 0.12rem);
+    }
+
+    .comments-count {
+        font-family: 'Press Start 2P', cursive;
+        color: white;
+        background-color: #fb5706;
+        padding: calc(0.5vw + 0.075rem) calc(1.05vw + 0.12rem);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: calc(1.05vw + 0.12rem);
+    }
+
+    .comments-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #comment-textarea {
+        border: 1px solid #fb5706;
+        border-bottom: none;
+        border-radius: 5px 5px 0 0;
+        padding: calc(1.1vw + 0.12rem);
+        outline: none;
+        width: 70%;
+        overflow: scroll;
+        font-size: calc(1.83vw + 0.12rem);
+    }
+
+    .range-input-div {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%;
+    }
+
+    #range-input {
+        width: 90%;
+    }
+
+    .output-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /*  border: 1px solid black; */
+        height: 100%;
+        width: 20%;
+    }
+
+    .output-div #rangevalue {
+        font-size: calc(1.83vw + 0.12rem);
+    }
+
+    .output-div i {
+        font-size: calc(1.83vw + 0.12rem);
+    }
+
+    .submit-btn-box {
+        border: 1px solid #fb5706;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        padding: calc(0.5vw + 0.075rem);
+    }
+
+    .submit-comment-btn {
+        background-color: #fb5706;
+        color: white;
+        padding: calc(0.5vw + 0.075rem) calc(1.05vw + 0.12rem);
+        font-weight: bold;
+        font-size: calc(1.83vw + 0.12rem);
+        font-family: 'Roboto Slab', serif;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .comment-links {
+        font-size: calc(1.83vw + 0.12rem);
+        margin: calc(1.05vw + 0.12rem), 0;
+    }
+
+
+
+    .comments-container {
+        display: flex;
+        flex-direction: column;
+        gap: calc(0.5vw + 0.075rem);
+
+    }
+
+    .comment-block {
+        display: flex;
+        flex-direction: column;
+        background-color: #191919;
+        padding: calc(1.05vw + 0.12rem);
+        gap: calc(1.05vw + 0.12rem);
+        border-radius: 10px;
+        width: 70%;
+
+    }
+
+    .user-time-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .comment-user {
+        color: #fb5706;
+        font-size: calc(1.83vw + 0.12rem);
+    }
+
+    .time-stamp {
+        color: lightgrey;
+        font-weight: 100;
+        font-size: calc(1.31vw + 0.12rem);
+    }
+
+    .time-stamp i {
+        color: #ffb600;
+    }
+
+    .actual-comment {
+        color: lightgrey;
+        font-size: calc(1.83vw + 0.12rem);
+    }
+
+
+}
+
+
+
+@media (min-width:1024px) {
+
+
+
+    .ninety-div {
+        display: flex;
+        align-items: center;
+        padding: calc(0.9vw + 0.05rem) 0;
+    }
+
+
+
+    .manga-overview {
+        width: 63%;
+        flex-direction: row;
+        align-items: center;
+        order: 1;
+        gap: calc(1.76vw + 0.12rem);
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .manga-scores {
+        width: 50%;
+        flex-direction: column;
+        justify-content: space-between;
+
+        gap: calc(1.76vw + 0.12rem);
+        height: calc(37.41vw + 0.12rem);
+
+    }
+
+    .manga-title {
+        font-size: calc(3.72vw + 0.12rem);
+        letter-spacing: 2px;
+        line-height: calc(3.72vw + 0.12rem)
+    }
+
+    .smaller-title {
+        font-size: calc(2.74vw + 0.12rem);
+        line-height: calc(2.74vw + 0.12rem);
+    }
+
+    .review-text-block {
+        height: calc(14.83vw + 0.12rem);
+
+    }
+
+    .review-manga-title {
+        font-size: calc(1.27vw + 0.12rem);
+    }
+
+    .review-score {
+        font-size: calc(1.76vw + 0.12rem);
+    }
+
+    .categ-div {
+        font-size: calc(1.27vw + 0.12rem);
+    }
+
+
+    .score-field {
+        font-size: calc(1.08vw + 0.12rem);
+    }
+
+    .categ-div {
+        font-size: calc(1.37vw + 0.12rem);
+    }
+
+    .stats {
+
+        gap: calc(0.75vw + 0.02rem)
+    }
+
+    .score-field {
+        font-size: calc(1.08vw + 0.12rem);
+
+        padding: calc(0.46vw + 0.02rem);
+    }
+
+    .art-score {
+        height: calc(2.74vw + 0.12rem);
+    }
+
+    .character-score {
+        height: calc(2.74vw + 0.12rem);
+    }
+
+    .story-score {
+        height: calc(2.74vw + 0.12rem);
+    }
+
+    .score-nr {
+        font-size: calc(1.37vw + 0.12rem);
+    }
+
+
+
+
+    .infos-summary-div {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        gap: calc(0.9vw + 0.05rem);
+        height: calc(37.41vw + 0.12rem);
+
+
+    }
+
+
+    .sidebar {
+        display: none;
+    }
+
+
+
+    .info-title {
+        font-size: calc(1.37vw + 0.12rem);
+        margin-bottom: calc(0.9vw + 0.05rem);
+    }
+
+
+    .info-line {
+        margin: calc(0.265vw + 0.02rem);
+    }
+
+    .info-field {
+        font-size: calc(0.9vw + 0.05rem);
+    }
+
+    .info-piece {
+        font-size: calc(1.27vw + 0.12rem);
+
+        color: white;
+    }
+
+    .review-manga-cover-img {
+        max-height: 100%;
+    }
+
+
+    .manga-summary {
+        font-size: calc(1vw + 0.12rem);
+        line-height: calc(1.76vw + 0.12rem);
+        background-color: rgba(1, 1, 1, 0.5);
+        padding: calc(0.46vw + 0.02rem);
+    }
+
+    .panel-container {
+        width: 35%;
+        order: 2;
+        display: flex;
+        align-items: center;
+        /* height: 385px; */
+        height: calc(37.41vw + 0.12rem);
+        border-radius: 10px;
+        padding: 0;
+        border: 3px solid #fb5706
+    }
+
+    .long-panel-img {
+        display: none;
+    }
+
+    .longest-panel-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+    }
+
+
+
+    .review-sidebar-container {
+
+        margin-top: calc(2.74vw + 0.12rem);
+    }
+
+    .review-body {
+        width: 70%;
+
+        margin: 0;
+    }
+
+    .review-text {
+        width: 100%;
+    }
+
+    .review-text h2 {
+        font-size: calc(3.23vw + 0.12rem);
+
+    }
+
+    .review-text h4 {
+        font-size: calc(2.25vw + 0.12rem);
+        margin: calc(0.9vw + 0.05rem) 0;
+        width: 100%;
+    }
+
+    .review-text p {
+        /* font-size: calc(1.37vw + 0.12rem); */
+        font-size: calc(1vw + 0.12rem);
+        line-height: calc(1.76vw + 0.12rem);
+    }
+
+    .review-text img {
+        width: 60%;
+        margin: calc(1.76vw + 0.12rem) 0;
+    }
+
+    .conclusion h2 {
+        font-size: calc(2.25vw + 0.12rem);
+        margin: calc(1.76vw + 0.12rem) 0;
+    }
+
+
+    .conclusion-scores {
+        justify-content: space-evenly;
+        padding: calc(0.46vw + 0.02rem);
+        margin: calc(0.9vw + 0.05rem) 0;
+
+    }
+
+    .final-score {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: calc(0.46vw + 0.02rem);
+        width: 30%;
+
+    }
+
+    .final-score h6 {
+        font-size: calc(1.76vw + 0.12rem);
+        padding: calc(0.46vw + 0.02rem);
+    }
+
+    .final-score h3 {
+        font-size: calc(3.23vw + 0.12rem);
+    }
+
+    .vote-div {
+
+        gap: calc(0.265vw + 0.02rem);
+    }
+
+
+
+
+
+    .vote-div h6 {
+
+        font-size: calc(0.9vw + 0.05rem);
+    }
+
+    .vote-div output {
+        font-size: calc(1.76vw + 0.12rem);
+    }
+
+    .submit-btn {
+        padding: calc(0.46vw + 0.02rem) calc(0.9vw + 0.05rem);
+        font-size: calc(1.37vw + 0.12rem);
+    }
+
+    .conclusion p {
+        color: white;
+        text-align: center;
+        padding: calc(0.9vw + 0.05rem);
+    }
+
+    .pros-cons {
+        padding: calc(0.46vw + 0.02rem);
+        margin-bottom: calc(0.9vw + 0.05rem);
+
+    }
+
+
+    .div-thumb h3 {
+
+        font-size: calc(1.37vw + 0.12rem);
+        padding: calc(0.46vw + 0.02rem);
+
+        margin-bottom: calc(0.75vw + 0.02rem);
+    }
+
+    .div-thumb i {
+
+        font-size: calc(1.76vw + 0.12rem);
+
+    }
+
+    .pros-cons span {
+        padding-left: calc(0.9vw + 0.05rem);
+        margin-bottom: calc(0.46vw + 0.002rem);
+        font-size: calc(1.37vw + 0.12rem);
+    }
+
+    .comments-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: calc(1.76vw + 0.12rem) 0;
+    }
+
+    .ninety-comments-div {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: calc(0.9vw + 0.05rem);
+    }
+
+    .comments-title-div {
+        display: flex;
+        width: 70%;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .comments-title {
+        font-family: 'Press Start 2P', cursive;
+        color: #fb5706;
+        font-size: calc(1.76vw + 0.12rem);
+    }
+
+    .comments-count {
+        font-family: 'Press Start 2P', cursive;
+        color: white;
+        background-color: #fb5706;
+        padding: calc(0.46vw + 0.02rem) calc(0.9vw + 0.05rem);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: calc(0.9vw + 0.05rem);
+    }
+
+    .comments-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #comment-textarea {
+        border: 1px solid #fb5706;
+        border-bottom: none;
+        border-radius: 5px 5px 0 0;
+        padding: calc(0.46vw + 0.05rem);
+        outline: none;
+        width: 70%;
+        overflow: scroll;
+        font-size: calc(1.37vw + 0.12rem);
+    }
+
+    .submit-btn-box {
+        border: 1px solid #fb5706;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        padding: calc(0.46vw + 0.02rem);
+    }
+
+    .submit-comment-btn {
+        background-color: #fb5706;
+        color: white;
+        padding: calc(0.46vw + 0.02rem) calc(0.9vw + 0.05rem);
+        font-weight: bold;
+        font-size: calc(1.37vw + 0.12rem);
+        font-family: 'Roboto Slab', serif;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .comment-links {
+        font-size: calc(1.37vw + 0.12rem);
+        margin: calc(0.9vw + 0.05rem), 0;
+    }
+
+    .comments-container {
+        display: flex;
+        flex-direction: column;
+        gap: calc(0.46vw + 0.02rem);
+
+    }
+
+    .comment-block {
+        display: flex;
+        flex-direction: column;
+        background-color: #191919;
+        padding: calc(0.9vw + 0.05rem);
+        gap: calc(0.9vw + 0.05rem);
+        border-radius: 10px;
+        width: 70%;
+    }
+
+    .user-time-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .comment-user {
+        color: #fb5706;
+        font-size: calc(1.37vw + 0.12rem);
+    }
+
+    .time-stamp {
+        color: lightgrey;
+        font-weight: 100;
+        font-size: calc(1vw + 0.113rem);
+    }
+
+    .actual-comment {
+        color: lightgrey;
+        font-size: calc(1.37vw + 0.12rem);
+    }
+
+}
